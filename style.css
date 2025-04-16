@@ -375,3 +375,60 @@ input[type="text"], input[type="email"], input[type="number"] {
     border: none;
     cursor: pointer;
 }
+
+/* Estilos generales para móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .content .par {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .cn {
+        display: block;
+        margin: 20px auto;
+    }
+
+    .formulario,
+    .form {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .campo input,
+    .campo select {
+        width: 100%;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .icon {
+        text-align: center;
+    }
+
+    select {
+        width: 90%;
+        margin-top: 10px;
+    }
+}
