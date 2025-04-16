@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(img/5.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 109vh;
+        }
+        .login-container {
+            background-color: #00000093;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(104, 25, 25, 0.677);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            background-color: #ff730083;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(104, 25, 25, 0.677);
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 15px;
+            border: 1px solid #ff7200;
+        }
+        .amiibo-button {
+            width: 100%;
+            padding: 15px 25px;
+            background-color: #ff73008f;
+            color: #040303;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(199, 12, 12, 0.2);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .amiibo-button:hover {
+            background-color: #fff;
+            transform: scale(1.1);
+        }
+
+        .amiibo-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.866);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario" required><br>
+            <input type="password" id="password" placeholder="Contraseña" required><br>
+            <button type="submit" class="amiibo-button">Iniciar sesión</button>
+        </form>
+    </div>
+
+    <script>
+        // Contraseña única para acceder
+        const passwordCorrecta = "1234"; // Cambia la contraseña aquí
+        const usernameCorrecto = "admin"; // Cambia el usuario aquí
+
+        // Función de inicio de sesión
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevenir que el formulario se envíe
+
+            // Obtener los valores ingresados
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Validar usuario y contraseña
+            if (username === usernameCorrecto && password === passwordCorrecta) {
+                // Redirigir a index.html si la contraseña es correcta
+                window.location.href = "index.html";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        });
+    </script>
+
+</body>
+</html>

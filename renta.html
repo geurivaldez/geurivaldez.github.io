@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Renta</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function calcularTotal() {
+            const dias = parseInt(document.getElementById("dias").value) || 0;
+            const precio = parseFloat(document.getElementById("precio").value) || 0;
+            const total = dias * precio;
+            document.getElementById("total").value = total.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <div class="formulario">
+        <button class="bu" onclick="window.location.href='index.html'">Atrás</button>
+        <button class="bu">Guardar</button>
+
+        <h2>Formulario de Renta</h2>
+
+        <!-- Datos del cliente -->
+        <div class="fila">
+            <div class="campo"><label>Nombre del cliente</label><input type="text" name="nombre_cliente"></div>
+            <div class="campo"><label>Identificación</label><input type="text" name="identidad"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Teléfono</label><input type="text" name="telefono"></div>
+            <div class="campo"><label>Correo electrónico</label><input type="email" name="correo"></div>
+        </div>
+
+        <!-- Datos del vehículo -->
+        <div class="fila">
+            <div class="campo"><label>Vehículo</label><input type="text" name="vehiculo" placeholder="Marca, modelo, año"></div>
+            <div class="campo"><label>Placa</label><input type="text" name="placa"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Color</label><input type="text" name="color"></div>
+            <div class="campo"><label>Combustible</label>
+                <select name="combustible">
+                    <option value="">Selecciona</option>
+                    <option>Gasolina</option>
+                    <option>Diesel</option>
+                    <option>Gas</option>
+                    <option>Eléctrico</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Fechas y duración -->
+        <div class="fila">
+            <div class="campo"><label>Fecha de entrega</label><input type="date" name="fecha_entrega"></div>
+            <div class="campo"><label>Fecha de devolución</label><input type="date" name="fecha_devolucion"></div>
+        </div>
+
+        <div class="fila especial-group">
+            <div class="campo"><label>Días rentados</label><input type="number" id="dias" oninput="calcularTotal()" name="dias_renta"></div>
+            <div class="campo"><label>Precio por día</label><input type="number" id="precio" step="0.01" oninput="calcularTotal()" name="precio_dia"></div>
+            <div class="campo"><label>Total</label><input type="number" id="total" readonly name="total"></div>
+        </div>
+
+        <!-- Pagos -->
+        <div class="fila">
+            <div class="campo"><label>Pago recibido</label><input type="number" name="pago_recibido" step="0.01"></div>
+            <div class="campo"><label>Forma de pago</label>
+                <select name="forma_pago">
+                    <option value="">Selecciona</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="tarjeta">Tarjeta</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Documentos -->
+        <div class="fila">
+            <div class="campo"><label>Licencia del cliente</label><input type="text" name="licencia_cliente" placeholder="Número de licencia"></div>
+            <div class="campo"><label>Fecha de vencimiento</label><input type="date" name="vencimiento_licencia"></div>
+        </div>
+
+        <!-- Condiciones -->
+        <div class="fila">
+            <div class="campo"><label>Combustible al entregar</label>
+                <select name="nivel_combustible">
+                    <option value="">Selecciona</option>
+                    <option value="lleno">Lleno</option>
+                    <option value="3/4">3/4</option>
+                    <option value="1/2">1/2</option>
+                    <option value="1/4">1/4</option>
+                    <option value="vacío">Vacío</option>
+                </select>
+            </div>
+            <div class="campo"><label>Observaciones</label><input type="text" name="observaciones" placeholder="Detalles importantes..."></div>
+        </div>
+
+        <!-- Botones
+        <div class="botones">
+            <button class="btn-cancelar">✖</button>
+            <button class="btn-guardar">✔</button>
+        </div> -->
+    </div>
+</body>
+</html>

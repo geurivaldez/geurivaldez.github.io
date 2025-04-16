@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mantenimiento Vehículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="formulario">
+
+        <button class="bu" onclick="window.location.href='index.html'">Atrás</button>
+        <button class="bu">Guardar</button>
+        
+        <h2>Registro de Mantenimiento</h2>
+
+        <div class="fila">
+            <div class="campo"><label>Vehículo</label><input type="text" placeholder="Ej. Toyota Corolla 2020"></div>
+            <div class="campo"><label>Placa</label><input type="text" placeholder="Ej. ABC-1234"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Fecha de mantenimiento</label><input type="date"></div>
+            <div class="campo"><label>Tipo de mantenimiento</label>
+                <select>
+                    <option value="">Selecciona</option>
+                    <option value="aceite">Cambio de aceite</option>
+                    <option value="frenos">Frenos</option>
+                    <option value="motor">Motor</option>
+                    <option value="transmisión">Transmisión</option>
+                    <option value="general">Mantenimiento general</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Descripción</label><input type="text" placeholder="Detalles del mantenimiento realizado..."></div>
+        </div>
+
+        <div class="fila especial-group">
+            <div class="campo"><label>Proveedor / Taller</label><input type="text" placeholder="Nombre del proveedor o taller"></div>
+            <div class="campo"><label>Monto</label><input type="number" step="0.01"></div>
+            <div class="campo"><label>Forma de pago</label>
+                <select>
+                    <option value="">Selecciona</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="tarjeta">Tarjeta</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="botones">
+            <button class="btn-cancelar">✖</button>
+            <button class="btn-guardar">✔</button>
+        </div>
+    </div>
+</body>
+</html>

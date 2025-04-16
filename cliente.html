@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="formulario"><div class="fila especial-group">
+        </div>
+        <button class="bu" onclick="window.location.href='index.html'">Atras</button>
+        <button class="bu">Guardar</button>
+
+        <h2>Información al cliente</h2>
+        <div class="fila">
+            <div class="campo"><label>Nombre</label><input type="text"></div>
+            <div class="campo"><label>Apellido</label><input type="text"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label>Identidad</label>
+                <input type="text" placeholder="Número de identificación">
+            </div>
+            <div class="campo radio-group">
+                <label><input type="radio" name="idTipo"> Pasaporte</label>
+                <label><input type="radio" name="idTipo"> Empresa</label>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Historia</label><input type="text" placeholder="Año de nacimiento"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Teléfono móvil</label><input type="text" class="whatsapp-icon"></div>
+            <div class="campo"><label>Teléfono de la empresa</label><input type="text" class="whatsapp-icon"></div>
+        </div>
+
+        <div class="fila especial-group">
+            <div class="campo"><label>Especial</label><input type="text" value="Normal"></div>
+            <div class="campo"><label>% Descuen</label><input type="number"></div>
+            <div class="campo"><label>% Incremer</label><input type="number"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Local</label><input type="text" value="Dominican Republic"></div>
+            <div class="campo"><label>Ciudad</label><input type="text"></div>
+            <div class="campo"><label>Distrito</label><input type="text"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Habla a</label><input type="text"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Correo electrónico</label><input type="email"></div>
+        </div>
+
+        <div class="fila">
+            <div class="campo"><label>Notas</label><input type="text"></div>
+        </div>
+
+        <div class="fila">
+            <button class="añadir">+ Añadir licencia</button>
+        </div>
+
+        <!-- <div class="botones">
+            <button class="btn-cancelar">✖</button>
+            <button class="btn-guardar">✔</button>
+        </div> -->
+    </div>
+</body>
+</html>
